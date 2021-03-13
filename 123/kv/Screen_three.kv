@@ -1,0 +1,228 @@
+MDScreen:
+    name: 'scr3'
+    id: scr3
+    screen3_label1:screen3_label1
+    screen3_label2:screen3_label2
+    FloatLayout:
+        cols:1
+
+        MDToolbar:
+            font_style: "Button"
+            title: 'Check page for each bill'
+            bold: True
+            text_size: self.size
+            pos_hint: {'center_y': .9}
+
+        MDRectangleFlatButton:
+            pos_hint: {'center_x': .5, 'center_y': .09}
+            font_size: 16
+            text:'Cancel'
+            text_color: [0, 0, 1, 1]
+            on_press:
+                root.manager.transition.direction = 'right'
+                app.root.current = 'scr1'
+
+#first checkline --------------------------------------
+        BoxLayout:
+            id: try_box
+            orientation: "horizontal"
+            spacing: 10
+            padding: 150
+            MDLabel:
+                id: screen3_label1
+                bold: False
+                text: app.stored_data.get('mydata')['text'] if app.stored_data.exists('mydata') else ''
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': 1}
+
+            MDRectangleFlatButton:
+                id: button1
+                font_size: 16
+                text: 'Payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': 1}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [0, 1, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+
+                size_hint: (.15, .1)
+            MDRectangleFlatButton:
+                id: button2
+                font_size: 16
+                text: 'Not payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': 1}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [1, 0, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+
+                size_hint: (.15, .1)
+
+#second checkline-----------------------------------------
+
+        BoxLayout:
+            orientation: "horizontal"
+            spacing: 10
+            padding: 150
+            MDLabel:
+                id: screen3_label2
+                bold: False
+                text: app.stored_data.get('mydata2')['text2'] if app.stored_data.exists('mydata2') else ''
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .8}
+            MDRectangleFlatButton:
+                id: button3
+                font_size: 16
+                text: 'Payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .8}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [0, 1, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+            MDRectangleFlatButton:
+                id: button4
+                font_size: 16
+                text: 'Not payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .8}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [1, 0, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+
+#third checkline-----------------------------------------
+
+        BoxLayout:
+            orientation: "horizontal"
+            spacing: 10
+            padding: 150
+            MDLabel:
+                id: screen3_label3
+                bold: False
+                text: app.stored_data.get('mydata3')['text3'] if app.stored_data.exists('mydata3') else ''
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .6}
+            MDRectangleFlatButton:
+                id: button5
+                font_size: 16
+                text: 'Payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [0, 1, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+            MDRectangleFlatButton:
+                id: button6
+                font_size: 16
+                text: 'Not payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [1, 0, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+#fourth checkline-----------------------------------------
+
+        BoxLayout:
+            orientation: "horizontal"
+            spacing: 10
+            padding: 150
+            MDLabel:
+                id: screen3_label4
+                bold: False
+                text: app.stored_data.get('mydata4')['text4'] if app.stored_data.exists('mydata4') else ''
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .4}
+            MDRectangleFlatButton:
+                id: button7
+                font_size: 16
+                text: 'Payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .4}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [0, 1, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+            MDRectangleFlatButton:
+                id: button8
+                font_size: 16
+                text: 'Not payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .4}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [1, 0, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+#fifth checkline-----------------------------------------
+        BoxLayout:
+            orientation: "horizontal"
+            spacing: 10
+            padding: 150
+            MDLabel:
+                id: screen3_label5
+                bold: False
+                text: app.stored_data.get('mydata5')['text5'] if app.stored_data.exists('mydata5') else ''
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .2}
+            MDRectangleFlatButton:
+                id: button9
+                font_size: 16
+                text: 'Payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .2}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [0, 1, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+            MDRectangleFlatButton:
+                id: button10
+                font_size: 16
+                text: 'Not payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .2}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [1, 0, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+#fifth checkline-----------------------------------------
+        BoxLayout:
+            orientation: "horizontal"
+            spacing: 10
+            padding: 150
+            MDLabel:
+                id: screen3_label6
+                bold: False
+                text: app.stored_data.get('mydata6')['text6'] if app.stored_data.exists('mydata6') else ''
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .0}
+            MDRectangleFlatButton:
+                id: button11
+                font_size: 16
+                text: 'Payed'
+                text_color: [0, 0, 1, 1]
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [0, 1, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+            MDRectangleFlatButton:
+                id: button12
+                font_size: 16
+                text: 'Not payed'
+                text_color: [0, 0, 1, 1]
+                bold: True
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                on_press:
+                    if self.text_color == [0, 0, 1, 1]: self.text_color = [1, 0, 0, 1]
+                    else: self.text_color = [0, 0, 1, 1]
+                size_hint: (.15, .1)
+
+

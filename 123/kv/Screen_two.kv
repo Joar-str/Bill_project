@@ -1,0 +1,240 @@
+MDScreen:
+    name: 'scr2'
+    id: scr2
+    text_name:text_name
+    label_name:label_name
+    text_name2:text_name2
+    label_name2:label_name2
+    FloatLayout:
+        cols:1
+
+        MDToolbar:
+            font_style: "Button"
+            title: 'Here you register your bills which will be displayed'
+            bold: True
+            text_size: self.size
+            pos_hint: {'center_y': .9}
+
+#----------Button To move to page three
+        MDRectangleFlatButton:
+            pos_hint: {'center_x': .5, 'center_y': .09}
+            text:'Done'
+            on_press:
+                root.manager.transition.direction = 'right'
+                app.root.current = 'scr1'
+
+        BoxLayout:
+
+            orientation: "horizontal"
+
+            spacing: 50
+            padding: 150
+
+            MDRectangleFlatButton:
+                font_size: 16
+                text: 'Submit'
+                pos_hint: {'center_x': .5, 'center_y': 1}
+                on_press:
+                    label_name.text = text_name.text
+                    app.stored_data.put('mydata', text=text_name.text)
+                    app.update_label1()
+                    app.reset()
+
+                size_hint: (.15, .1)
+            MDTextField:
+                hint_text:'type here'
+                id: text_name
+                pos_hint: {'center_x': .5, 'center_y': 1}
+                multiline: False
+                size_hint: (.3,.2)
+            MDLabel:
+                id: label_name
+                bold: False
+                text: ''
+                canvas.before:
+                    Color:
+                        rgba: 0,0,1,1
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': 1}
+
+        #Second Input row ----------------------------------------
+        BoxLayout:
+            orientation: "horizontal"
+            size_width: root.width, root.height
+            spacing: 50
+            padding: 150
+            MDRectangleFlatButton:
+                font_size: 16
+                text: 'Submit'
+                pos_hint: {'center_x': .5, 'center_y': .8}
+                on_press:
+                    label_name2.text = text_name2.text
+                    app.stored_data.put('mydata2', text2=text_name2.text)
+                    app.update_label2()
+                    app.reset()
+
+                size_hint: (.15, .1)
+            MDTextField:
+
+                hint_text:'type here'
+                id: text_name2
+                pos_hint: {'center_x': .5, 'center_y': .8}
+                multiline: False
+                size_hint: (.3,.2)
+
+            MDLabel:
+                id: label_name2
+                bold: False
+                text: ''
+                canvas.before:
+                    Color:
+                        rgba: 0,0,1,1
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .8}
+
+#Third Input row ----------------------------------------
+        BoxLayout:
+            orientation: "horizontal"
+            size_width: root.width, root.height
+            spacing: 50
+            padding: 150
+            MDRectangleFlatButton:
+                font_size: 16
+                text: 'Submit'
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                on_press:
+                    label_name3.text = text_name3.text
+                    app.stored_data.put('mydata3', text3=text_name3.text)
+                    app.update_label3()
+                    app.reset()
+
+                size_hint: (.15, .1)
+            MDTextField:
+
+                hint_text:'type here'
+                id: text_name3
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                multiline: False
+                size_hint: (.3,.2)
+
+            MDLabel:
+                id: label_name3
+                bold: False
+                text: ''
+                canvas.before:
+                    Color:
+                        rgba: 0,0,1,1
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .6}
+
+#fourth Input row ----------------------------------------
+        BoxLayout:
+            orientation: "horizontal"
+            size_width: root.width, root.height
+            spacing: 50
+            padding: 150
+            MDRectangleFlatButton:
+                font_size: 16
+                text: 'Submit'
+                pos_hint: {'center_x': .5, 'center_y': .4}
+                on_press:
+                    label_name4.text = text_name4.text
+                    app.stored_data.put('mydata4', text4=text_name4.text)
+                    app.update_label4()
+                    app.reset()
+
+                size_hint: (.15, .1)
+            MDTextField:
+
+                hint_text:'type here'
+                id: text_name4
+                pos_hint: {'center_x': .5, 'center_y': .4}
+                multiline: False
+                size_hint: (.3,.2)
+
+            MDLabel:
+                id: label_name4
+                bold: False
+                text: ''
+                canvas.before:
+                    Color:
+                        rgba: 0,0,1,1
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .4}
+
+#fifth Input row ----------------------------------------
+        BoxLayout:
+            orientation: "horizontal"
+            size_width: root.width, root.height
+            spacing: 50
+            padding: 150
+            MDRectangleFlatButton:
+                font_size: 16
+                text: 'Submit'
+                pos_hint: {'center_x': .5, 'center_y': .2}
+                on_press:
+                    label_name5.text = text_name5.text
+                    app.stored_data.put('mydata5', text5=text_name5.text)
+                    app.update_label5()
+                    app.reset()
+
+                size_hint: (.15, .1)
+            MDTextField:
+
+                hint_text:'type here'
+                id: text_name5
+                pos_hint: {'center_x': .5, 'center_y': .2}
+                multiline: False
+                size_hint: (.3,.2)
+
+            MDLabel:
+                id: label_name5
+                bold: False
+                text: ''
+                canvas.before:
+                    Color:
+                        rgba: 0,0,1,1
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .2}
+
+#Third Input row ----------------------------------------
+        BoxLayout:
+            orientation: "horizontal"
+            size_width: root.width, root.height
+            spacing: 50
+            padding: 150
+            MDRectangleFlatButton:
+                font_size: 16
+                text: 'Submit'
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                on_press:
+                    label_name6.text = text_name6.text
+                    app.stored_data.put('mydata6', text6=text_name6.text)
+                    app.update_label6()
+                    app.reset()
+
+                size_hint: (.15, .1)
+            MDTextField:
+
+                hint_text:'type here'
+                id: text_name6
+                pos_hint: {'center_x': .5, 'center_y': .0}
+                multiline: False
+                size_hint: (.3,.2)
+
+            MDLabel:
+                id: label_name6
+                bold: False
+                text: ''
+                canvas.before:
+                    Color:
+                        rgba: 0,0,1,1
+                size_hint: (.3,.2)
+                font_size: 16
+                pos_hint: {'center_x': .5, 'center_y': .0}
+
